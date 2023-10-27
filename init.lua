@@ -227,7 +227,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -270,6 +270,9 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Defaults tabstop to 4 if that plugin cannot determine it correctly
+vim.o.tabstop = 4
 
 -- [[ Basic Keymaps ]]
 
@@ -385,12 +388,12 @@ vim.defer_fn(function()
       },
       swap = {
         enable = true,
-        swap_next = {
-          ['<leader>a'] = '@parameter.inner',
-        },
-        swap_previous = {
-          ['<leader>A'] = '@parameter.inner',
-        },
+        -- swap_next = {
+        --   ['<leader>a'] = '@parameter.inner',
+        -- },
+        -- swap_previous = {
+        --   ['<leader>A'] = '@parameter.inner',
+        -- },
       },
     },
   }
@@ -485,6 +488,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  pylsp = {},
 }
 
 -- Setup neovim lua configuration
@@ -562,3 +566,4 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+require("user_keymaps")
