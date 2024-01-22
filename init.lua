@@ -488,7 +488,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
-  pylsp = {},
+  -- pylsp = {},
 }
 
 -- Setup neovim lua configuration
