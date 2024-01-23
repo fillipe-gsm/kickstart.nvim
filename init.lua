@@ -516,46 +516,10 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- Trying with `pyls` for python 2
+-- Python 2.7 LSP `pyls`, ran via docker
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
---
--- if not configs.pyls then
---   configs.pyls = {
---     default_config = {
---       -- cmd = {"pyls", "--server.host", "127.0.0.1", "--server.port", "80"},
---       cmd = vim.lsp.rpc.connect('127.0.0.1', 80),
---       name = {'pyls'},
---       root_dir = lspconfig.util.root_pattern('.git'),
---       filetypes = {"python"},
---     },
---   }
--- end
---
--- lspconfig.pyls.setup {
---   on_attach = function(client, bufnr)
---     -- Your custom on_attach function here
---   end,
--- }
--- lspconfig.pyls.setup {}
--- vim.lsp.start({
---   name = 'pyls',
---   cmd = vim.lsp.rpc.connect('127.0.0.1', 80),
---   -- root_dir = lspconfig.util.root_pattern('.git'),
--- })
 
-
--- require('lspconfig').pyls.setup {
---   capabilities = capabilities,
---   on_attach = on_attach,
---   filetypes = {"python"},
---   cmd = {"pyls-langserver", "--server.host", "localhost", "--server.port", "80"},
---   root_dir = vim.fn.getcwd(),
---   settings = {},
--- }
---
-
--- Crazy docker attempt
 if not configs.pyls then
   configs.pyls = {
     default_config = {
@@ -577,6 +541,7 @@ if not configs.pyls then
     }
   }
 end
+
 lspconfig.pyls.setup {
   on_attach=on_attach,
   capabilities = capabilities,
