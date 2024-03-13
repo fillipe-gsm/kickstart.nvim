@@ -527,14 +527,15 @@ if not configs.pyls then
         params.processId = vim.NIL
       end,
       cmd = {
-        'docker',
-        'run',
-        '-i',
-        '--rm',
-        '-v',
-        '/home/fillipe/Documents/Projects/docker/python2.7/code:/code',
-        'pyls-container',
-        'pyls'
+        "/home/fillipe/dev/envcp/bin/pyls"
+        -- 'docker',
+        -- 'run',
+        -- '-i',
+        -- '--rm',
+        -- '-v',
+        -- '/home/fillipe/Documents/Projects/docker/python2.7/code:/code',
+        -- 'pyls-container',
+        -- 'pyls'
       },
       root_dir = lspconfig.util.root_pattern('.git'),
       filetypes = {"python"},
