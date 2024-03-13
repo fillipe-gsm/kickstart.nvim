@@ -261,6 +261,9 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
+-- Vertical delimiter line
+vim.opt.colorcolumn = "80"
+
 -- Decrease update time
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
@@ -488,7 +491,10 @@ local servers = {
       telemetry = { enable = false },
     },
   },
-  -- pylsp = {},
+  -- pylsp = { filetypes = { "python" } },
+  grammarly = {},
+  marksman = { "markdown" },
+  yamlls = { "yaml", "yml" },
 }
 
 -- Setup neovim lua configuration
