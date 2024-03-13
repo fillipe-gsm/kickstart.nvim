@@ -261,8 +261,8 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
--- Vertical delimiter line
-vim.opt.colorcolumn = "80"
+-- Vertical delimiter line (Specific for Optibus)
+vim.opt.colorcolumn = "120"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -522,7 +522,7 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- Python 2.7 LSP `pyls`, ran via docker
+-- Python 2.7 LSP `pyls`, ran from command line
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 
@@ -532,17 +532,7 @@ if not configs.pyls then
       before_init = function(params)
         params.processId = vim.NIL
       end,
-      cmd = {
-        "/home/fillipe/dev/envcp/bin/pyls"
-        -- 'docker',
-        -- 'run',
-        -- '-i',
-        -- '--rm',
-        -- '-v',
-        -- '/home/fillipe/Documents/Projects/docker/python2.7/code:/code',
-        -- 'pyls-container',
-        -- 'pyls'
-      },
+      cmd = {"/home/fillipe/dev/envcp/bin/pyls"},
       root_dir = lspconfig.util.root_pattern('.git'),
       filetypes = {"python"},
     }
