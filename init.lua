@@ -156,7 +156,15 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'onedark'
+      require('onedark').setup {
+        style = 'light'
+      }
     end,
+  },
+
+  -- Solarized inspired theme, although it is not that good-looking
+  {
+    'overcache/NeoSolarized',
   },
 
   {
