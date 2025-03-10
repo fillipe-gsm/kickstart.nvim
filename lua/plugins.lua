@@ -426,6 +426,10 @@ require('lazy').setup({
             },
           },
         },
+        emmet_language_server = {
+          -- Forcing the emmet_language_server to work on Javascript files as well so template literals can be written there
+          filetypes = { 'html', 'css', 'javascript' },
+        },
       }
 
       -- Ensure the servers and tools above are installed
