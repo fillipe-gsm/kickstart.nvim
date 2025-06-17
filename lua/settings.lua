@@ -63,3 +63,6 @@ vim.opt.scrolloff = 10
 
 -- Vertical delimiter line
 vim.opt.colorcolumn = '80'
+
+-- Show diagnostics (from linters etc.) as virtual text
+vim.diagnostic.config { virtual_text = true }
