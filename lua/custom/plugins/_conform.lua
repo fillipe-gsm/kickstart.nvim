@@ -29,7 +29,7 @@ return {
         -- Run the formatter
         'ruff_format',
         -- Organize the imports
-        'ruff_organize_imports',
+        -- 'ruff_organize_imports',
       },
       -- You can customize some of the format options for the filetype (:help conform.format)
       -- rust = { 'rustfmt', lsp_format = 'fallback' },
