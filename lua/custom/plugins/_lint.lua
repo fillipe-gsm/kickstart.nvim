@@ -4,6 +4,7 @@ return {
   config = function()
     require('lint').linters_by_ft = {
       python = { 'ruff' },
+      html = { 'htmlhint' },
     }
 
     vim.api.nvim_create_autocmd({ 'BufWritePost' }, {

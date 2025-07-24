@@ -441,6 +441,16 @@ require('lazy').setup({
             },
           },
         },
+        superhtml = {
+          filetypes = { 'html', 'tpl' },
+          settings = {
+            html = {
+              analysis = {
+                ignore = { '*' },
+              },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
