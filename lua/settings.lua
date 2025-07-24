@@ -66,3 +66,11 @@ vim.opt.colorcolumn = '80'
 
 -- Show diagnostics (from linters etc.) as virtual text
 vim.diagnostic.config { virtual_text = true }
+
+-- Customize specific filetypes
+vim.filetype.add {
+  extension = {
+    -- Python bottle templates have a `tpl` extension, which should be viewed as html
+    tpl = 'html',
+  },
+}
