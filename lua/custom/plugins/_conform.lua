@@ -38,6 +38,7 @@ return {
       sh = { 'shfmt' },
       json = { 'jq' },
       markdown = { 'markdownlint' },
+      r = { 'air' },
     },
   },
 }
