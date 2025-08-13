@@ -39,6 +39,7 @@ return {
       json = { 'jq' },
       markdown = { 'markdownlint' },
       r = { 'air' },
+      tex = { 'tex-fmt' }
     },
   },
 }

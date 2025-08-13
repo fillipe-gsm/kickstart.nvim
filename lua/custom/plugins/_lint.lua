@@ -8,6 +8,7 @@ return {
       javascript = { 'eslint_d' },
       json = { 'jsonlint' },
       markdown = { 'markdownlint' },
+      tex = { 'chktex' },
     }
 
     vim.api.nvim_create_autocmd({ 'BufWritePost' }, {

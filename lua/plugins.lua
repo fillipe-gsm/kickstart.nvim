@@ -463,6 +463,7 @@ require('lazy').setup({
         'shfmt',  -- shell
         'prettierd', -- Javascript, HTML, CSS, etc.
         'jq',  -- JSON
+        'tex-fmt',  -- LaTeX
         'air',  -- R
         -- Linters
         'eslint_d',  -- Javascript, HTML, CSS, etc.
