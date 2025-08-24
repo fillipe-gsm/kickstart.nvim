@@ -451,6 +451,7 @@ require('lazy').setup({
             },
           },
         },
+        tombi = {},
       }
 
       -- Ensure the servers and tools above are installed
