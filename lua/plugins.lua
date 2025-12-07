@@ -452,6 +452,7 @@ require('lazy').setup({
           },
         },
         tombi = {},
+        cssls = {}, -- CSS LSP
       }
 
       -- Ensure the servers and tools above are installed
@@ -473,6 +474,7 @@ require('lazy').setup({
         'ruff', -- format and lint Python
         'htmlhint', -- lint HTML
         'prettierd', -- format Javascript
+        'stylelint', -- CSS linter and formatter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
