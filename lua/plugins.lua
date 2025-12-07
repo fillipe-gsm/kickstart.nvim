@@ -451,7 +451,7 @@ require('lazy').setup({
             },
           },
         },
-        tombi = {},
+        tombi = {}, -- TOML LSP
         cssls = {}, -- CSS LSP
       }
 
