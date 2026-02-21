@@ -37,6 +37,7 @@ return {
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       html = { 'superhtml' },
       -- css = { 'stylelint' }, -- I need to learn how to use this as a formatter
+      json = { 'jq' },
     },
   },
 }

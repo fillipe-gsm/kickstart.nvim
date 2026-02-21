@@ -483,6 +483,9 @@ require('lazy').setup({
         'ts_ls', -- language server
         'prettierd', -- formatter
         'eslint_d', -- linter
+        -- Json
+        'jq', -- formatter
+        'jsonlint', -- linter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

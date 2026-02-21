@@ -6,6 +6,7 @@ return {
       python = { 'ruff' },
       html = { 'htmlhint' },
       javascript = { 'eslint_d' },
+      json = { 'jsonlint' },
     }
 
     vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
