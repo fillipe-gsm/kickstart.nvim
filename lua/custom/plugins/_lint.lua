@@ -45,6 +45,13 @@ return {
       end,
     }
 
+    -- Disable MD013 (line length) for markdownlint
+    lint.linters.markdownlint.args = {
+      '--disable',
+      'MD013',
+      '--',
+    }
+
     lint.linters_by_ft = {
       python = { 'ruff' },
       sh = { 'shellcheck' },
