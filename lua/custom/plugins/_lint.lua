@@ -50,7 +50,7 @@ return {
       sh = { 'shellcheck' },
       javascript = { 'eslint_d' },
       json = { 'jsonlint' },
-      markdown = { 'markdownlint' },
+      markdown = { 'markdownlint', 'languagetool' },
       tex = { 'chktex' },
       asciidoc = { 'languagetool' },
     }
