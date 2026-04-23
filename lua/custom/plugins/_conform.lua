@@ -32,7 +32,7 @@ return {
         'ruff_organize_imports',
       },
       -- You can customize some of the format options for the filetype (:help conform.format)
-      -- rust = { 'rustfmt', lsp_format = 'fallback' },
+      rust = { 'rustfmt', lsp_format = 'fallback' }, -- needs to be installed separately
       -- Conform will run the first available formatter
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       html = { 'superhtml' },
