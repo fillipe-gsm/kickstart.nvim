@@ -486,6 +486,8 @@ require('lazy').setup({
         -- Json
         'jq', -- formatter
         'jsonlint', -- linter
+        -- Rust
+        'rust_analyzer', -- language server
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
