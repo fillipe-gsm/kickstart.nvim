@@ -1,0 +1,6 @@
+vim.pack.add { 'https://github.com/f-person/git-blame.nvim' }
+
+require('gitblame').setup {
+  -- Disabled by default
+  enabled = false,
+}
