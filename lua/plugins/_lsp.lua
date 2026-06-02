@@ -178,6 +178,7 @@ do
         },
       },
     },
+    rust_analyzer = {},
   }
 
   vim.pack.add {
