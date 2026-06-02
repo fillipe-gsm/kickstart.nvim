@@ -1,6 +1,15 @@
 -- [[ Autocomplete Engine ]]
 do
   vim.pack.add { { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range '1.*' } }
+
+  -- Sort sources
+  local source_priority = {
+    snippets = 4,
+    lsp = 3,
+    path = 2,
+    buffer = 1,
+  }
+
   require('blink.cmp').setup {
     keymap = {
       -- 'default' (recommended) for mappings similar to built-in completions
@@ -55,7 +64,22 @@ do
     -- the rust implementation via `'prefer_rust_with_warning'`
     --
     -- See `:help blink-cmp-config-fuzzy` for more information
-    fuzzy = { implementation = 'lua' },
+    fuzzy = {
+      implementation = 'lua',
+      -- Change priority order of completion sources
+      sorts = {
+        function(a, b)
+          local a_priority = source_priority[a.source_id]
+          local b_priority = source_priority[b.source_id]
+          if a_priority ~= b_priority then
+            return a_priority > b_priority
+          end
+        end,
+        -- defaults
+        'score',
+        'sort_text',
+      },
+    },
 
     -- Shows a signature help window while you type arguments for a function
     signature = { enabled = true },
