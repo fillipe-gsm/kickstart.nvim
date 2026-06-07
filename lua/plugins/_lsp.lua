@@ -179,6 +179,7 @@ do
       },
     },
     rust_analyzer = {},
+    bashls = {},
   }
 
   vim.pack.add {
@@ -220,6 +221,10 @@ do
     'jsonlint', -- linter
     -- Rust
     'rust_analyzer', -- language server
+    -- Bash
+    'bashls', -- bash language server
+    'shellcheck', -- bash linter
+    'shfmt', -- bash formatter
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }

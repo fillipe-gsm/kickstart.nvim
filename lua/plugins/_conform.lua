@@ -13,6 +13,7 @@ do
         lua = true,
         python = true,
         rust = true,
+        bash = true,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
         return { timeout_ms = 500 }
@@ -41,6 +42,7 @@ do
       html = { 'superhtml' },
       -- css = { 'stylelint' }, -- I need to learn how to use this as a formatter
       json = { 'jq' },
+      bash = { 'shfmt' },
     },
   }
 

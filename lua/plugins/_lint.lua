@@ -7,6 +7,7 @@ require('lint').linters_by_ft = {
   html = { 'htmlhint' },
   javascript = { 'eslint_d' },
   json = { 'jsonlint' },
+  bash = { 'shellcheck' },
 }
 
 -- Run the lint on file save
