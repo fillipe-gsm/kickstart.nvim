@@ -180,6 +180,7 @@ do
     },
     rust_analyzer = {},
     bashls = {},
+    jsonls = {},
   }
 
   vim.pack.add {
@@ -219,6 +220,7 @@ do
     -- Json
     'jq', -- formatter
     'jsonlint', -- linter
+    'jsonls', -- lsp
     -- Rust
     'rust_analyzer', -- language server
     -- Bash
