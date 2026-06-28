@@ -155,6 +155,13 @@ do
         Lua = {
           format = { enable = false }, -- Disable formatting (formatting is done by stylua)
         },
+        workspace = {
+          library = {
+            -- Allow neovim to be aware of the runtime files, so autocompletions
+            -- work
+            vim.api.nvim_get_runtime_file('', true),
+          },
+        },
       },
     },
     superhtml = {
