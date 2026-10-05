@@ -188,6 +188,7 @@ do
     rust_analyzer = {},
     bashls = {},
     jsonls = {},
+    nim_langserver = {},
   }
 
   vim.pack.add {
